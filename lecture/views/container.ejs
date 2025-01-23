@@ -1,0 +1,58 @@
+<h2>User Info</h2>
+<% if (name) { %>
+    <p>Selected User: <b><%= name %></b></p>
+<% } else { %>
+    <p><%= message %></p>
+    <h2></h2>
+<% } %>
+
+<h2>Select User</h2>
+<form action="/" method="GET">
+    <% names.forEach((name) => { %>
+        <label>
+            <input type="radio" name="name" value="<%= name %>"/> <%= name %>
+        </label>
+    <label>
+    <% }); %>
+    <button type="submit">Select!</button>
+</form>
+
+<h2>Create User</h2>
+<form action="/users" onsubmit="createUser(event)">
+    <label>
+        <input id="input-name" type="text" name="name" placeholder="Enter a name">
+    </label>
+    <button type="submit">Create!</button>
+</form>
+
+<h2>Object conditions</h2>
+<ul>
+    <li>user: <%- user %></li>
+    <li>Object.prototype.admin: <%- objectPrototypeAdmin %></li>
+</ul>
+
+<h2>Links</h2>
+<ul>
+    <li><a href='/'>home</a></li>
+    <li><a href='/source'>source code</a></li>
+</ul>
+
+<script>
+    const createUser = (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('input-name').value;
+
+        fetch('/users', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({'name': name})})
+        .then(data => {
+            if (data.status !== 201) {
+                throw new Error('Failed to create user');
+            }
+            alert('User created successfully');
+            window.location.reload();
+        })
+        .catch(err => {
+            alert(`Failed to create user: ${JSON.stringify(err)}`);        
+        });
+    };
+</script>

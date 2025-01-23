@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - PORT=3000
+      - FLAG=flag{C0ngr4tul4t10ns_y0u_h4v3_4cc3ss_t0_th3_fl4g!}
