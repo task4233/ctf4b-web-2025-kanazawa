@@ -35,7 +35,6 @@ const users = [
     { name: 'alice', admin: false },
     { name: 'bob', admin: false },
     { name: 'carol', admin: false },
-    { name: 'task4233', admin: false },
 ];
 
 // ユーザー情報を名前に基づいて取得する関数

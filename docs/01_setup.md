@@ -89,7 +89,7 @@ docker compose up -d
 
 次は、このアプリケーションのソースコードを一部変更して再起動してみましょう。
 
-まず、エディタで `ctf4b-web-2025-kanazawa/demo-app/app.js` を開いて35行めあたりを見てください。下記のソースコードが表示されるはずです。
+まず、エディタで `ctf4b-web-2025-kanazawa/demo-app/app.js` を開いて35行目あたり([ref](../demo-app/app.js#L33-L38))を見てください。下記のソースコードが表示されるはずです。
 
 ```javascript
 // ユーザー情報の模擬データベース（本番ではデータベースや認証システムを使用）
@@ -117,7 +117,7 @@ const users = [
 
 ```bash
 docker compose down
-docker compose up --build -d
+docker compose up -d
 ```
 
 その後、ブラウザを再度読み込み、あなたの名前が追加されていることを確認してください。

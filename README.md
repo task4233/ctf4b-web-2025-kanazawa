@@ -1,6 +1,4 @@
 # CTF4b Web 2025 in Kanazawa
-[EN is here](./README-en.md)
-
 このリポジトリは、[CTF for Beginners 2025 金沢](https://www.seccon.jp/13/seccon_beginners/kanazawa.html)のWebジャンルのためのリポジトリです。
 
 ## 事前準備
