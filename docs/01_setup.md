@@ -1,6 +1,8 @@
 ## step1 - 環境構築
 講義において、以下のツールを利用する可能性があります。そのため、事前の準備をお願いします。
 
+何か質問がある方は、Xアカウントをお持ちであれば [@task4233](https://x.com/task4233) のDMで聞いていただいても構いません。極力答えます。
+
 - Git
 - Docker
 - エディタ
@@ -114,9 +116,49 @@ const users = [
 次に、ターミナルを開いて以下のコマンドを実行してください。これは、コードの再読み込みと再起動のためのコマンドです。
 
 ```bash
-docker compose restart
+docker compose down
+docker compose up --build -d
 ```
 
 その後、ブラウザを再度読み込み、あなたの名前が追加されていることを確認してください。
 
+![updated.png](./assets/updated.png)
+
+## 3. Burp Suiteによる動作確認
+
+最後に、Burp Suiteを用いたリクエストの追跡をしてみましょう。手元のBurp Suiteを開いてください。
+
+最初に以下のような画面が出てくるので、 `Temporary project in memory` を選択して、右下の `Next` ボタンをクリックしてください。
+
+![burp-setup.png](./assets/burp-setup.png)
+
+次の画面でも、 `Use Burp defaults` を選択して、右下の `Start Burp` ボタンをクリックしてください。
+
+![burp-setup2.png](./assets/burp-setup2.png)
+
+すると、以下のような最初のページが開くはずです。
+
+![burp-setup3.png](./assets/burp-setup3.png)
+
+ここで、上に並んでいるタブの中で、 `Proxy` を選択してください。すると、以下のような画面が表示されるはずです。
+
+![burp-setup4.png](./assets/burp-setup4.png)
+
+その後、画面右側にある `Open Browser` ボタンをクリックしてください。すると、ブラウザが立ち上がるはずです。そのブラウザのアドレスバーに、先ほどの `http://localhost:3000` を入力してアクセスしてください。
+
+すると、以下のように先ほどと同様のページが表示されるはずです。
+
+![burp-setup5.png](./assets/burp-setup5.png)
+
+ここで、いくつか操作をしてみましょう。ユーザを選択してみたり、ユーザを作成してみたり、ソースコードを見てみたり。
+
+操作が終わったら、Burp Suiteを開きましょう。ここで、 `HTTP history` というタブをクリックして、アクセス履歴を確認してみましょう。
+
+以下の通り、いくつかのアクセスログが確認できるはずです。
+
+![burp-setup6.png](./assets/burp-setup6.png)
+
+ここまできたら、準備は完了です！
+
+当日、お会いできることを楽しみにしています！
 
