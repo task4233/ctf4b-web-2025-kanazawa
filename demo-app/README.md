@@ -1,4 +1,4 @@
-## lecture
+## demo-app
 [EN is here](./README-en.md)
 
 lectureは講義で利用するWebアプリケーション用のディレクトリです。Docker Composeで起動することが出来ます。

@@ -1,9 +1,9 @@
-## lecture
+## demo-app
 [日本語のドキュメントはこちら](./README.md)
 
 Thid directory is for the Web application used in the lecture. You can launch the app with Docker Compose.
 
-## 事前に必要なツール
+## Prerequisite
 - Docker
   - MacOS: [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
   - Windows: [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
