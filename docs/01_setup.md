@@ -160,5 +160,11 @@ docker compose up -d
 
 ここまできたら、準備は完了です！
 
+最後に起動したDockerコンテナを下記コマンドで落としておきましょう。
+
+```bash
+docker compose down
+```
+
 当日、お会いできることを楽しみにしています！
 
